@@ -1,0 +1,49 @@
+.poster-section {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  background-size: cover;
+  backdrop-filter: brightness(10%);
+  overflow: hidden;
+}
+
+.poster-section-title {
+  font-family: "Oswald", sans-serif;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  font-size: 40px;
+  text-align: left;
+  font-weight: bold;
+  width: 20%;
+  height: 80px;
+  z-index: 10;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  padding-left: 5%;
+  background-color: rgb(24, 6, 76);
+}
+
+.poster-section-title::before {
+  transform: skewX(-30deg);
+  display: block;
+  left: calc(100% - 30px);
+  position: absolute;
+  content: "";
+  height: 80px;
+  top: 0;
+  width: 60px;
+  z-index: -1;
+  border-right: 5px solid var(--primary-font-color-4);
+  background-color: rgb(24, 6, 76);
+}
+
+.card-slider-container {
+  margin-top: auto;
+}

@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Roboto:wght@400;500&family=Tilt+Neon&display=swap");
+@import url("./Navbar.css");
+@import url("./SearchBar.css");
+@import url("./CategoryBar.css");
+@import url("./SignInPage.css");
+/* @import url("./Account.css"); */
+@import url("./MovieCard.css");
+@import url("./MediaPage.css");
+@import url("./Loading.css");
+@import url("./ImageSlider.css");
+@import url("./PosterSection.css");
+@import url("./CardSlider.css");
+@import url("./MediaBackground.css");
+@import url("./DiscoverPage.css");
+@import url("./Filters.css");
+@import url("./MovieTabs.css");
+@import url("./CommunityPage.css");
+@import url("./CommunityGroup.css");
+
+:root {
+  --primary-background-color: #0a0025;
+  --primary-font-color-1: #ffffff;
+  --primary-font-color-2: #b745e0;
+  /* --primary-font-color-3:#abff5c; */
+  --primary-font-color-3: darkred;
+  --primary-font-color-4: #cf1414;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  color: var(--primary-font-color-1);
+  box-sizing: border-box;
+  /* border: 1px solid green; */
+}
+
+body {
+  background-color: var(--primary-background-color);
+  width: 100%;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: white;
+}
+
+.homepage-first-screen {
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.normal-button {
+  height: 40px;
+  background-color: transparent;
+  font-size: 17px;
+  padding: 8px 16px;
+  border: solid 2px white;
+  border-radius: 25px;
+  transition: 0.2s ease-in-out;
+}
+
+.normal-button:hover {
+  border-color: var(--primary-font-color-3);
+  color: var(--primary-font-color-1);
+  background-color: var(--primary-font-color-3);
+}

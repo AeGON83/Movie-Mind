@@ -1,0 +1,292 @@
+.searchbar-container {
+  display: block;
+  width: 90%;
+  height: 550px;
+  height: 60%;
+  background-image: url(../assets/home-page-2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 10%;
+  border-top-right-radius: 400px;
+  border-bottom-right-radius: 400px;
+}
+
+.searchbar-title-container {
+  position: relative;
+  top: 4%;
+}
+
+.search-auto-complete-container::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+}
+
+.searchbar-title-container > p {
+  width: 900px;
+  text-wrap: balance;
+  font-size: 30px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--primary-background-color);
+  margin-left: 4%;
+  font-family: "Oswald", sans-serif;
+}
+
+.searchbar-title-container > p:nth-child(1) {
+  color: red;
+  font-size: 3.5rem;
+}
+.searchbar-title-container > p:nth-child(2) {
+  color: var(--primary-background-color);
+  font-size: 2.5rem;
+}
+
+.search-bar {
+  position: relative;
+  top: 16%;
+  width: 90%;
+  display: flexbox;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-bar-form {
+  margin-left: 4%;
+  /* margin-right: 4%; */
+  height: 60px;
+  position: relative;
+  width: 100%;
+  background: rgba(155, 155, 155, 0.6);
+  display: flex;
+  align-items: center;
+  border-radius: 60px;
+  padding: 20px;
+  border: 2px solid var(--primary-font-color-4);
+  position: relative;
+  transition: 0.3s ease-in-out;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+}
+
+.search-bar-form-focus {
+  border-radius: 20px 20px 0 0;
+}
+
+.search-bar-form input {
+  background: transparent;
+  flex: 1;
+  border: 0;
+  outline: 0;
+  padding: 18px 14zpx;
+  font-size: 20px;
+  color: var(--primary-font-color-4);
+  font-weight: 500;
+}
+
+::placeholder {
+  color: var(--primary-font-color-4);
+  font-weight: 500;
+}
+
+.search-bar-form > button {
+  width: 150px;
+  border-color: var(--primary-font-color-3);
+  color: var(--primary-font-color-1);
+  background-color: var(--primary-font-color-3);
+}
+
+.search-bar-form > button:hover {
+  width: 150px;
+  border-color: var(--primary-font-color-3);
+  color: var(--primary-font-color-1);
+  background-color: var(--primary-font-color-4);
+}
+
+.search-bar-switch {
+  position: relative;
+  display: inline-block;
+  width: 55px;
+  height: 28px;
+  scale: 0.65;
+}
+
+.search-bar-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: darkgreen;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 28px;
+  width: 28px;
+  background-color: yellowgreen;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.search-bar-switch input:checked + .slider {
+  background-color: darkred;
+}
+
+.search-bar-switch input:focus + .slider {
+  box-shadow: 0 0 1px darkred;
+}
+
+.search-bar-switch input:checked + .slider:before {
+  background-color: rgb(217, 0, 0);
+  -webkit-transform: translateX(25px);
+  -ms-transform: translateX(25px);
+  transform: translateX(25px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.search-bar-form > label:nth-child(3) {
+  margin-right: 20px;
+}
+
+.badges-container {
+  align-self: center;
+  position: relative;
+  top: 22%;
+  margin: 0 auto;
+  height: fit-content;
+  width: 60% !important ;
+  padding: 10px;
+  display: flex;
+  row-gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.badge {
+  cursor: pointer;
+  display: inline;
+  margin: 10px;
+  padding: 6px 12px;
+  border-radius: 80px;
+  font-weight: 500;
+  width: fit-content;
+  height: min-content;
+  transition: 0.3s ease-in-out;
+  background-color: rgb(24, 6, 76);
+  background-image: radial-gradient(
+    90.68% 92.96% at 9.32% 7.04%,
+    rgb(24, 6, 76, 0) 0%,
+    rgb(24, 6, 76, 0.68) 40.97%,
+    rgb(24, 6, 76, 0.8) 51.93%,
+    rgb(24, 6, 76, 0.95) 77.75%,
+    rgb(24, 6, 76, 0.95) 100%
+  );
+}
+.badge:hover {
+  background-color: lightgray;
+}
+
+.badge > span {
+  color: inherit;
+}
+
+/* suggesion container css */
+
+.search-auto-complete-container {
+  position: absolute;
+  width: calc(100% + 1px);
+  max-height: 240px;
+  overflow-y: scroll;
+  background-color: var(--primary-background-color);
+  border-radius: 0 0 20px 20px;
+  left: 0;
+  top: 100%;
+  z-index: 10;
+  border-top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: rgba(49, 49, 50, 0.48) 6px 2px 16px 0px,
+    rgba(57, 55, 55, 0.8) -6px -2px 16px 0px;
+}
+
+.search-auto-complete-container li {
+  width: 30%;
+  height: 60px;
+  list-style-type: none;
+  border-radius: 10px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
+    rgb(0 0 0/73%) 0px 16px 10px -10px;
+  transition: 0.3s ease-in-out;
+  background-color: rgb(24, 6, 76);
+  background-image: radial-gradient(
+    90.68% 92.96% at 9.32% 7.04%,
+    rgb(24, 6, 76, 0) 0%,
+    rgb(24, 6, 76, 0.68) 40.97%,
+    rgb(24, 6, 76, 0.8) 51.93%,
+    rgb(24, 6, 76, 0.95) 77.75%,
+    rgb(24, 6, 76, 0.95) 100%
+  );
+  overflow: hidden;
+}
+.search-auto-complete-container li:hover {
+  cursor: pointer;
+}
+
+.search-auto-complete-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+.search-auto-complete-container li img {
+  background-image: url(../assets/image-not-found.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 45px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.search-auto-complete-container li div {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.search-auto-complete-container li div p {
+  color: white;
+}
+.search-auto-complete-container li div p:first-child {
+  font-size: 15px;
+}
+.search-auto-complete-container li div p:last-child {
+  font-size: 13px;
+  font-style: italic;
+  color: lightgrey;
+}
